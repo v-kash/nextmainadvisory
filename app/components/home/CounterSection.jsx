@@ -105,7 +105,7 @@ export default function StatsCards() {
     //   icon: Sparkles
     // },
     {
-      number: 800,
+      number: 80,
       suffix: "+",
       label: "Solutions",
       // subtext: "Trusted by government initiatives",
