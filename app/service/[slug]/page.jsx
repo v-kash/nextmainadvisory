@@ -15,12 +15,12 @@ export default function InheritancePage({ params }) {
   const { slug } = params;
   const business = businessTypes.find((b) => b.slug === slug);
 
-  if (!business) return notFound();
-
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 300);
     return () => clearTimeout(timer);
   }, []);
+
+  if (!business) return notFound();
 
   if (loading) {
     return (
