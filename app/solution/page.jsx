@@ -9,6 +9,11 @@ import Footer from "../components/Footer";
 import "./page.css";
 import Script from "next/script";
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata = {
   title: "NextGen Services | Compliance, Funding & Growth for Startups & MSMEs",
   description:
@@ -227,7 +232,6 @@ export default function Solution() {
       <HotServicesSection />
       <FAQ />
       <CTA />
-      <Footer />
     </>
   );
 }

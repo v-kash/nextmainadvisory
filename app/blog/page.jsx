@@ -44,7 +44,6 @@ export default function About() {
       <Hero />
       <Blog />
       <CTA />
-      <Footer />
     </>
   );
 }

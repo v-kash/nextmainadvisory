@@ -3,17 +3,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Homebg from "../../assets/home-bg.png";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import { businessTypes } from "../data/businessData";
 import { Header } from "@/app/components/Header";
 import { FileText, Handshake } from "lucide-react";
 
 export default function InheritancePage({ params }) {
   const [loading, setLoading] = useState(true);
+  const para = useParams();
+  const slug = para.slug;
 
-  const { slug } = params;
   const business = businessTypes.find((b) => b.slug === slug);
-
+  console.log("buisness", business);
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 300);
     return () => clearTimeout(timer);

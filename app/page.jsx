@@ -159,7 +159,6 @@ export default function Home() {
       <DemoContact /> */}
       <GoogleReview />
       <CTA />
-      <Footer />
     </>
   );
 }

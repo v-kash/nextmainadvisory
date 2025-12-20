@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ✅ Performance optimizations
   compress: true,
   poweredByHeader: false,
 
-  // ✅ Image optimization
   images: {
     remotePatterns: [
       {
@@ -17,7 +15,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "img.youtube.com", // ✅ added youtube image host
+        hostname: "img.youtube.com",
       },
     ],
     formats: ["image/webp", "image/avif"],
@@ -34,6 +32,106 @@ const nextConfig = {
       "@heroicons/react",
       "react-icons",
     ],
+  },
+
+  async redirects() {
+    return [
+      {
+        source: "/inheritance/private-limited-company",
+        destination: "/service/private-limited-company",
+        permanent: true, // ✅ 301
+      },
+      {
+        source: "/inheritance/limited-liability-partnership",
+        destination: "/service/limited-liability-partnership",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/one-person-company",
+        destination: "/service/one-person-company",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/registered-partnership",
+        destination: "/service/registered-partnership",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/gst-certificate",
+        destination: "/service/gst-certificate",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/company-compliances",
+        destination: "/service/company-compliances",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/startup-india-certificate",
+        destination: "/service/startup-india-certificate",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/udyam-certificate-msme",
+        destination: "/service/udyam-certificate-msme",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/import-export-code",
+        destination: "/service/import-export-code",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/icegate-registration",
+        destination: "/service/icegate-registration",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/startup-india-seedfund",
+        destination: "/service/startup-india-seedfund",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/rkvy-raftaar",
+        destination: "/service/rkvy-raftaar",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/naiff",
+        destination: "/service/naiff",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/pmegp",
+        destination: "/service/pmegp",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/cgtmse",
+        destination: "/service/cgtmse",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/mudra-loan",
+        destination: "/service/mudra-loan",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/startup-seed-support",
+        destination: "/service/startup-seed-support",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/project-finance",
+        destination: "/service/project-finance",
+        permanent: true,
+      },
+      {
+        source: "/inheritance/venture-capital-funds",
+        destination: "/service/venture-capital-funds",
+        permanent: true,
+      },
+    ];
   },
 
   // ✅ Headers for better caching and security

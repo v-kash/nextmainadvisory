@@ -2,6 +2,7 @@ import "./globals.css";
 import FloatingButton from "./components/FloatingButton";
 import Script from "next/script";
 import { Be_Vietnam_Pro, Bebas_Neue, Inter } from "next/font/google";
+import Footer from "./components/Footer";
 
 // Optimize fonts with Next.js font optimization
 const beVietnamPro = Be_Vietnam_Pro({
@@ -29,6 +30,14 @@ const inter = Inter({
   preload: true,
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  viewportFit: "cover",
+};
+
 export const metadata = {
   title: "NEXT-GEN BUSINESS CONSULTANCY",
   description:
@@ -45,13 +54,13 @@ export const metadata = {
     canonical: "https://www.nextgenbusiness.co.in/",
   },
 
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-    viewportFit: "cover",
-  },
+  // viewport: {
+  //   width: "device-width",
+  //   initialScale: 1,
+  //   maximumScale: 5,
+  //   userScalable: true,
+  //   viewportFit: "cover",
+  // },
 
   icons: {
     icon: [
@@ -265,12 +274,23 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" className={`${beVietnamPro.variable} ${bebasNeue.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      className={`${beVietnamPro.variable} ${bebasNeue.variable} ${inter.variable}`}
+    >
       <head>
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.clarity.ms" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://www.googletagmanager.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://www.clarity.ms"
+          crossOrigin="anonymous"
+        />
 
         <script
           type="application/ld+json"
@@ -322,6 +342,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <Footer />
         <FloatingButton />
       </body>
     </html>

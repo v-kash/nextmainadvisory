@@ -57,7 +57,6 @@ export default function About() {
       <Hero />
       <Blogview title="From Idea to Impact: How Startups Can Scale Smartly in India" />
       <CTA />
-      <Footer />
     </>
   );
 }
