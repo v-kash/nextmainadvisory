@@ -134,11 +134,9 @@ export default function Footer() {
             <div className="flex items-start justify-center md:justify-start gap-2">
               <MapPin className="w-5 h-5 text-white mt-0.5" />
               <p>
-                Silver Redience-2, Science City Road,
-                <br />
-                Opp. Empire Business House, Sola,
-                <br />
-                Ahmedabad, Gujarat, India, 380060
+              2ND FLOOR, PRESIDENT PLAZA, SG HIGHWAY, THALTEJ,
+              <br />
+              AHMEDABAD - 380054
               </p>
             </div>
 
