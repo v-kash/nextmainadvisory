@@ -1,16 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 // Ensure the domain we send to the leads API is always in a consistent format
 const normalizeDomain = (domain) => {
-  const fallback = "https://nextgenbusiness.co.in";
+  const fallback = "nextgenbusiness.co.in";
   if (!domain) return fallback;
-  if (domain.startsWith("http://") || domain.startsWith("https://")) {
-    return domain;
-  }
-  return `https://${domain}`;
+  // Remove protocol if present
+  let cleanDomain = domain.replace(/^https?:\/\//, "");
+  // Remove trailing slash if present
+  cleanDomain = cleanDomain.replace(/\/$/, "");
+  return cleanDomain;
 };
 
 // Safely parse JSON responses, with robust logging for production debugging
@@ -44,7 +45,6 @@ const ContactPage = () => {
     email: "",
     phone: "",
     message: "",
-    captchaAnswer: "",
     service: "",
   });
 
@@ -54,7 +54,6 @@ const ContactPage = () => {
     error: false,
   });
 
-  const [captchaQuestion, setCaptchaQuestion] = useState("");
   const [errors, setErrors] = useState({});
   const [focusedField, setFocusedField] = useState(null);
 
@@ -65,37 +64,6 @@ const ContactPage = () => {
     "General Consultancy",
     "Consulting Services",
   ];
-
-  // Load CAPTCHA on component mount
-  useEffect(() => {
-    loadCaptcha();
-  }, []);
-
-  const loadCaptcha = async () => {
-    try {
-      const response = await fetch(process.env.NEXT_PUBLIC_CAPTCHA, {
-        cache: "no-store",
-        credentials: "include",
-        headers: {
-          "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to load CAPTCHA");
-      }
-
-      const data = await response.json();
-      setCaptchaQuestion(data.question);
-    } catch (error) {
-      console.error("Error loading CAPTCHA:", error);
-      setStatus({
-        loading: false,
-        message: "Unable to load CAPTCHA. Please refresh the page.",
-        error: true,
-      });
-    }
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -138,13 +106,6 @@ const ContactPage = () => {
       if (!value.trim()) {
         setErrors((prev) => ({ ...prev, [name]: "Message is required" }));
       }
-    } else if (name === "captchaAnswer") {
-      if (!value.trim()) {
-        setErrors((prev) => ({
-          ...prev,
-          [name]: "CAPTCHA answer is required",
-        }));
-      }
     }
 
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -171,8 +132,6 @@ const ContactPage = () => {
     }
     if (!formData.message.trim()) newErrors.message = "Message is required";
     if (!formData.service.trim()) newErrors.service = "Service is required";
-    if (!formData.captchaAnswer.trim())
-      newErrors.captchaAnswer = "CAPTCHA answer is required";
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -189,7 +148,6 @@ const ContactPage = () => {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
-        captchaAnswer: formData.captchaAnswer,
         domain: normalizeDomain(process.env.NEXT_PUBLIC_DOMAIN),
         message: `${formData.message}, Service Type: ${formData.service}`,
       };
@@ -199,6 +157,7 @@ const ContactPage = () => {
         headers: {
           "Content-Type": "application/json",
           "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
+          "Origin": `https://${normalizeDomain(process.env.NEXT_PUBLIC_DOMAIN)}`,
         },
         credentials: "include",
         body: JSON.stringify(payload),
@@ -224,11 +183,6 @@ const ContactPage = () => {
           error: errorMessage,
         });
 
-        if (errorMessage.toLowerCase().includes("captcha")) {
-          setFormData((prev) => ({ ...prev, captchaAnswer: "" }));
-          loadCaptcha();
-        }
-
         setStatus({
           loading: false,
           message: errorMessage,
@@ -242,7 +196,6 @@ const ContactPage = () => {
         email: "",
         phone: "",
         message: "",
-        captchaAnswer: "",
         service: "",
       });
 
@@ -252,8 +205,6 @@ const ContactPage = () => {
         message: "Thank you! Your message has been sent successfully.",
         error: false,
       });
-
-      loadCaptcha();
     } catch (error) {
       console.error("Form submission error:", error);
       setStatus({
@@ -620,126 +571,6 @@ const ContactPage = () => {
                     </p>
                   )}
                 </div>
-
-                {/* CAPTCHA Section - More Compact */}
-                {captchaQuestion && (
-                  <div className="bg-gray-50 p-3 rounded-lg border border-gray-200">
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center space-x-2">
-                        <div className="flex items-center justify-center w-4 h-4 bg-blue-600 rounded">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-2.5 w-2.5 text-white"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </div>
-                        <span className="text-xs font-semibold text-gray-700">
-                          Security Verification
-                        </span>
-                      </div>
-                      <button
-                        type="button"
-                        onClick={loadCaptcha}
-                        className="inline-flex items-center text-xs text-black hover:text-blue-600 transition-colors"
-                        title="Refresh verification code"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-3 w-3 mr-1"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                          />
-                        </svg>
-                        Refresh
-                      </button>
-                    </div>
-
-                    <div className="mb-2">
-                      <div className="flex items-center justify-between mb-1">
-                        <label className="text-xs text-gray-500">
-                          Solve this equation to continue
-                        </label>
-                        <span className="text-xs text-gray-400">Required</span>
-                      </div>
-
-                      <div className="flex items-center space-x-2">
-                        <div className="flex-1 bg-white px-3 py-2 rounded border border-gray-300 font-mono text-base font-bold text-gray-800 text-center tracking-wider">
-                          {captchaQuestion}
-                        </div>
-                        <div className="text-xl text-gray-400">=</div>
-                        <div className="flex-1">
-                          <input
-                            type="number"
-                            name="captchaAnswer"
-                            value={formData.captchaAnswer}
-                            onChange={handleChange}
-                            onFocus={() => setFocusedField("captchaAnswer")}
-                            onBlur={() => setFocusedField(null)}
-                            placeholder="Result *"
-                            className={`w-full px-3 py-2 border rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm font-medium
-                              ${
-                                errors.captchaAnswer
-                                  ? "border-red-500 bg-red-50"
-                                  : "border-gray-300"
-                              }`}
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    {errors.captchaAnswer && (
-                      <div className="flex items-start space-x-2 p-2 bg-red-50 border border-red-200 rounded">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-3 w-3 text-red-500 mt-0.5 flex-shrink-0"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                        <p className="text-red-600 text-xs font-medium">
-                          {errors.captchaAnswer}
-                        </p>
-                      </div>
-                    )}
-
-                    <div className="mt-2 pt-2 border-t border-gray-200">
-                      <p className="text-xs text-gray-500 flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-2.5 w-2.5 mr-1 text-gray-400"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                        This verification helps prevent automated submissions
-                      </p>
-                    </div>
-                  </div>
-                )}
 
                 {/* Terms Checkbox */}
                 <div className="flex items-start pt-1">

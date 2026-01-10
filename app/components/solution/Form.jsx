@@ -4,12 +4,13 @@ import { useState } from "react";
 
 // Ensure the domain we send to the leads API is always in a consistent format
 const normalizeDomain = (domain) => {
-  const fallback = "https://nextgenbusiness.co.in";
+  const fallback = "nextgenbusiness.co.in";
   if (!domain) return fallback;
-  if (domain.startsWith("http://") || domain.startsWith("https://")) {
-    return domain;
-  }
-  return `https://${domain}`;
+  // Remove protocol if present
+  let cleanDomain = domain.replace(/^https?:\/\//, "");
+  // Remove trailing slash if present
+  cleanDomain = cleanDomain.replace(/\/$/, "");
+  return cleanDomain;
 };
 
 // Safely parse JSON responses, with robust logging for production debugging
@@ -119,7 +120,6 @@ const Form = () => {
       email: formData.email.trim(),
       phone: formData.mobile.trim(),
       message: message,
-      captchaAnswer: "", // No CAPTCHA for this form
       domain: normalizeDomain(process.env.NEXT_PUBLIC_DOMAIN),
     };
 
@@ -129,6 +129,7 @@ const Form = () => {
         headers: {
           "Content-Type": "application/json",
           "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
+          "Origin": `https://${normalizeDomain(process.env.NEXT_PUBLIC_DOMAIN)}`,
         },
         credentials: "include",
         body: JSON.stringify(payload),

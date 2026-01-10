@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { ArrowRight, RefreshCcw } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 const initialForm = {
   name: "",
   phone: "",
-  captchaAnswer: "",
 };
 
 const initialStatus = {
@@ -17,12 +16,13 @@ const initialStatus = {
 
 // Ensure the domain we send to the leads API is always in a consistent format
 const normalizeDomain = (domain) => {
-  const fallback = "https://nextgenbusiness.co.in";
+  const fallback = "nextgenbusiness.co.in";
   if (!domain) return fallback;
-  if (domain.startsWith("http://") || domain.startsWith("https://")) {
-    return domain;
-  }
-  return `https://${domain}`;
+  // Remove protocol if present
+  let cleanDomain = domain.replace(/^https?:\/\//, "");
+  // Remove trailing slash if present
+  cleanDomain = cleanDomain.replace(/\/$/, "");
+  return cleanDomain;
 };
 
 // Safely parse JSON responses, with robust logging for production debugging
@@ -52,39 +52,8 @@ const parseJsonSafely = async (response, context = "lead-api") => {
 
 export default function CTA() {
   const [formData, setFormData] = useState(initialForm);
-  const [captchaQuestion, setCaptchaQuestion] = useState("");
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState(initialStatus);
-
-  useEffect(() => {
-    loadCaptcha();
-  }, []);
-
-  const loadCaptcha = async () => {
-    try {
-      const response = await fetch(process.env.NEXT_PUBLIC_CAPTCHA, {
-        cache: "no-store",
-        credentials: "include",
-        headers: {
-          "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to load CAPTCHA");
-      }
-
-      const data = await response.json();
-      setCaptchaQuestion(data.question);
-    } catch (error) {
-      console.error("Error loading CAPTCHA:", error);
-      setStatus({
-        loading: false,
-        message: "Unable to load verification. Please refresh.",
-        error: true,
-      });
-    }
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -103,11 +72,6 @@ export default function CTA() {
       }
     } else if (name === "name" && !value.trim()) {
       setErrors((prev) => ({ ...prev, [name]: "Name is required" }));
-    } else if (name === "captchaAnswer" && !value.trim()) {
-      setErrors((prev) => ({
-        ...prev,
-        [name]: "CAPTCHA answer is required",
-      }));
     }
 
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -119,9 +83,8 @@ export default function CTA() {
 
     const trimmedName = formData.name.trim();
     const trimmedPhone = formData.phone.trim();
-    const trimmedCaptcha = formData.captchaAnswer.trim();
     const domainValue = normalizeDomain(process.env.NEXT_PUBLIC_DOMAIN);
-    const fallbackEmail = "subscriber@nextgenbusiness.cp.in";
+    const fallbackEmail = "subscriber@nextgenbusiness.co.in";
 
     const newErrors = {};
     if (!trimmedName) newErrors.name = "Name is required";
@@ -130,7 +93,6 @@ export default function CTA() {
     } else if (!/^[0-9]{10,15}$/.test(trimmedPhone)) {
       newErrors.phone = "Phone number should be between 10 and 15 digits";
     }
-    if (!trimmedCaptcha) newErrors.captchaAnswer = "CAPTCHA answer is required";
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -147,7 +109,6 @@ export default function CTA() {
         name: trimmedName,
         email: fallbackEmail,
         phone: trimmedPhone,
-        captchaAnswer: trimmedCaptcha,
         domain: domainValue,
         message: "subscriber",
       };
@@ -157,6 +118,7 @@ export default function CTA() {
         headers: {
           "Content-Type": "application/json",
           "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
+          "Origin": `https://${normalizeDomain(process.env.NEXT_PUBLIC_DOMAIN)}`,
         },
         credentials: "include",
         body: JSON.stringify(payload),
@@ -182,12 +144,6 @@ export default function CTA() {
           error: errorMessage,
         });
 
-        // If CAPTCHA failed or expired, clear the answer and load a new one
-        if (errorMessage.toLowerCase().includes("captcha")) {
-          setFormData((prev) => ({ ...prev, captchaAnswer: "" }));
-          loadCaptcha();
-        }
-
         setStatus({
           loading: false,
           message: errorMessage,
@@ -204,7 +160,6 @@ export default function CTA() {
         message: "Thank you! We will contact you shortly.",
         error: false,
       });
-      loadCaptcha();
     } catch (error) {
       console.error("CTA submission error:", error);
       setStatus({
@@ -272,44 +227,6 @@ export default function CTA() {
                 )}
               </div>
             </div>
-
-            {captchaQuestion && (
-              <div className="bg-white/90 rounded-xl border border-white/40 px-4 py-3 shadow-sm">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-semibold text-[#05325f]">
-                    Security Verification
-                  </span>
-                  <button
-                    type="button"
-                    onClick={loadCaptcha}
-                    className="flex items-center text-xs text-[#05325f] hover:text-[#245586]"
-                  >
-                    <RefreshCcw className="w-3.5 h-3.5 mr-1" />
-                    Refresh
-                  </button>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="flex-1 bg-[#f5f7fb] px-3 py-2 rounded border border-gray-200 font-mono text-sm font-bold text-gray-800 text-center">
-                    {captchaQuestion}
-                  </div>
-                  <span className="text-gray-500 font-semibold">=</span>
-                  <input
-                    type="number"
-                    name="captchaAnswer"
-                    value={formData.captchaAnswer}
-                    onChange={handleChange}
-                    placeholder="Result *"
-                    className={`w-24 sm:w-28 px-3 py-2 rounded border text-sm font-medium text-gray-800 focus:ring-2 focus:ring-[#245586] focus:border-[#245586] outline-none
-                      ${errors.captchaAnswer ? "border-red-400 bg-red-50" : "border-gray-200"}`}
-                  />
-                </div>
-                {errors.captchaAnswer && (
-                  <p className="text-red-500 text-xs mt-2">
-                    {errors.captchaAnswer}
-                  </p>
-                )}
-              </div>
-            )}
 
             <button
               type="submit"
