@@ -149,6 +149,11 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+       <Script
+        src="https://cdn-in.pagesense.io/js/60064193730/f07b99df18894563bd538993af937091.js"
+        strategy="afterInteractive"
+      />
+
       <Header />
       <Hero />
       <CounterSection />
