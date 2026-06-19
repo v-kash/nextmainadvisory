@@ -161,167 +161,167 @@ const nextConfig = {
   },
 
   // ✅ Headers for better caching and security
-  // async headers() {
-  //   return [
-  //     {
-  //       source: "/(.*)",
-  //       headers: [
-  //         {
-  //           key: "X-DNS-Prefetch-Control",
-  //           value: "on",
-  //         },
-  //         {
-  //           key: "X-Content-Type-Options",
-  //           value: "nosniff",
-  //         },
-  //         {
-  //           key: "Referrer-Policy",
-  //           value: "origin-when-cross-origin",
-  //         },
-  //         {
-  //           key: "Content-Security-Policy",
-  //           value: [
-  //             "default-src 'self'",
-  //             "script-src 'self' 'unsafe-eval' 'unsafe-inline' blob: https://www.google.com https://apis.google.com https://ssl.gstatic.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://*.youtube.com https://*.google.com https://*.gstatic.com https://youtube.com https://*.doubleclick.net https://*.googleapis.com https://www.googleadservices.com https://tpc.googlesyndication.com https://www.youtubekids.com https://www.youtube-nocookie.com https://www.youtubeeducation.com https://www-onepick-opensocial.googleusercontent.com https://www.clarity.ms https://scripts.clarity.ms",
-  //             "script-src-elem 'self' 'unsafe-inline' blob: https://www.google.com https://apis.google.com https://ssl.gstatic.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://*.youtube.com https://*.google.com https://*.gstatic.com https://youtube.com https://*.doubleclick.net https://*.googleapis.com https://www.googleadservices.com https://tpc.googlesyndication.com https://www.youtubekids.com https://www.youtube-nocookie.com https://www.youtubeeducation.com https://www-onepick-opensocial.googleusercontent.com https://www.clarity.ms https://scripts.clarity.ms",
-  //             "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://*.youtube.com",
-  //             "media-src 'self' https://*.googlevideo.com https://*.youtube.com https://www.youtube-nocookie.com blob: data:",
-  //             "connect-src 'self' https://www.google.com https://apis.google.com https://*.google.com https://*.googleapis.com https://*.youtube.com https://www.youtube.com https://www.clarity.ms https://*.clarity.ms https://www.googletagmanager.com https://www.google-analytics.com https://leads.nextgenconsultancy.in",
-  //             "img-src 'self' data: blob: https: https://i.ytimg.com https://www.youtube-nocookie.com",
-  //             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  //             "font-src 'self' data: https://fonts.gstatic.com",
-  //           ].join("; "),
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/fonts/(.*)",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/_next/static/(.*)",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/images/(.*)",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/_next/image(.*)",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, stale-while-revalidate=86400",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/:path*.jpg",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/:path*.jpeg",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/:path*.png",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/:path*.gif",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/:path*.webp",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/:path*.svg",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/:path*.ico",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/:path*.avif",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/:path*.js",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       source: "/:path*.css",
-  //       headers: [
-  //         {
-  //           key: "Cache-Control",
-  //           value: "public, max-age=31536000, immutable",
-  //         },
-  //       ],
-  //     },
-  //   ];
-  // },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-DNS-Prefetch-Control",
+            value: "on",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "origin-when-cross-origin",
+          },
+          {
+            key: "Content-Security-Policy",
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' blob: https://www.google.com https://apis.google.com https://ssl.gstatic.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://*.youtube.com https://*.google.com https://*.gstatic.com https://youtube.com https://*.doubleclick.net https://*.googleapis.com https://www.googleadservices.com https://tpc.googlesyndication.com https://www.youtubekids.com https://www.youtube-nocookie.com https://www.youtubeeducation.com https://www-onepick-opensocial.googleusercontent.com https://www.clarity.ms https://scripts.clarity.ms",
+              "script-src-elem 'self' 'unsafe-inline' blob: https://www.google.com https://apis.google.com https://ssl.gstatic.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://*.youtube.com https://*.google.com https://*.gstatic.com https://youtube.com https://*.doubleclick.net https://*.googleapis.com https://www.googleadservices.com https://tpc.googlesyndication.com https://www.youtubekids.com https://www.youtube-nocookie.com https://www.youtubeeducation.com https://www-onepick-opensocial.googleusercontent.com https://www.clarity.ms https://scripts.clarity.ms",
+              "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://*.youtube.com",
+              "media-src 'self' https://*.googlevideo.com https://*.youtube.com https://www.youtube-nocookie.com blob: data:",
+              "connect-src 'self' https://www.google.com https://apis.google.com https://*.google.com https://*.googleapis.com https://*.youtube.com https://www.youtube.com https://www.clarity.ms https://*.clarity.ms https://www.googletagmanager.com https://www.google-analytics.com https://leads.nextgenconsultancy.in",
+              "img-src 'self' data: blob: https: https://i.ytimg.com https://www.youtube-nocookie.com",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+              "font-src 'self' data: https://fonts.gstatic.com",
+            ].join("; "),
+          },
+        ],
+      },
+      {
+        source: "/fonts/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/_next/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/images/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/_next/image(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, stale-while-revalidate=86400",
+          },
+        ],
+      },
+      {
+        source: "/:path*.jpg",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*.jpeg",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*.png",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*.gif",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*.webp",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*.svg",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*.ico",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*.avif",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*.js",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*.css",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
