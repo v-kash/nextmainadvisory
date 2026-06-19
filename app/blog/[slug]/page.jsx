@@ -14,11 +14,11 @@ export async function generateMetadata({ params }) {
 
   if (!blog) {
     return {
-      title: "Blog Not Found | NextGen Business Consultancy",
+      title: "Blog Not Found | NextGen Startup Advisory",
     };
   }
 
-  const baseUrl = "https://www.nextgenbusiness.co.in";
+  const baseUrl = "https://www.nextgenstartup.co.in";
   const blogUrl = `${baseUrl}/blog/${slug}`;
   const imageUrl = `${baseUrl}/Next-Gen-Logo.webp`;
   const publishedTime = blog.publishedDate
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
     : publishedTime;
 
   return {
-    title: `${blog.title} | NextGen Business Consultancy`,
+    title: `${blog.title} | NextGen Startup Advisory`,
     description: blog.description,
     robots: {
       index: true,
@@ -39,14 +39,16 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: blogUrl,
     },
-    authors: blog.author ? [{ name: blog.author.name, url: blog.author.url }] : undefined,
+    authors: blog.author
+      ? [{ name: blog.author.name, url: blog.author.url }]
+      : undefined,
     publishedTime: publishedTime,
     modifiedTime: modifiedTime,
     openGraph: {
       title: blog.title,
       description: blog.description,
       url: blogUrl,
-      siteName: "NextGen Business Consultancy",
+      siteName: "NextGen Startup Advisory",
       locale: "en_IN",
       type: "article",
       publishedTime: publishedTime,
@@ -59,7 +61,7 @@ export async function generateMetadata({ params }) {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `${blog.title} – NextGen Business Consultancy`,
+          alt: `${blog.title} – NextGen Startup Advisory`,
         },
       ],
     },
@@ -89,7 +91,7 @@ export default async function BlogPostPage({ params }) {
     notFound();
   }
 
-  const baseUrl = "https://www.nextgenbusiness.co.in";
+  const baseUrl = "https://www.nextgenstartup.co.in";
   const blogUrl = `${baseUrl}/blog/${slug}`;
   const imageUrl = `${baseUrl}/Next-Gen-Logo.webp`;
   const publishedTime = blog.publishedDate
@@ -111,12 +113,12 @@ export default async function BlogPostPage({ params }) {
     dateModified: modifiedTime,
     author: {
       "@type": "Organization",
-      name: blog.author?.name || "NextGen Business Consultancy",
+      name: blog.author?.name || "NextGen Startup Advisory",
       url: blog.author?.url || baseUrl,
     },
     publisher: {
       "@type": "Organization",
-      name: "NextGen Business Consultancy",
+      name: "NextGen Startup Advisory",
       url: baseUrl,
       logo: {
         "@type": "ImageObject",
@@ -187,4 +189,3 @@ export default async function BlogPostPage({ params }) {
     </>
   );
 }
-

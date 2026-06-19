@@ -39,11 +39,11 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "NEXT-GEN BUSINESS CONSULTANCY",
+  title: "NextGen Startup Advisory",
   description:
     "Your one-stop hub for Startup India, MSME support, tax exemptions, and investor connections.",
 
-  metadataBase: new URL("https://www.nextgenbusiness.co.in"),
+  metadataBase: new URL("https://www.nextgenstartup.co.in"),
 
   robots: {
     index: true,
@@ -51,7 +51,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.nextgenbusiness.co.in/",
+    canonical: "https://www.nextgenstartup.co.in/",
   },
 
   icons: {
@@ -78,27 +78,27 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://www.nextgenbusiness.co.in",
-    siteName: "NextGen Business Consultancy",
-    title: "NEXT-GEN BUSINESS CONSULTANCY",
+    url: "https://www.nextgenstartup.co.in",
+    siteName: "NextGen Startup Advisory",
+    title: "NextGen Startup Advisory",
     description:
       "Your one-stop hub for Startup India, MSME support, tax exemptions, and investor connections.",
     images: [
       {
-        url: "https://www.nextgenbusiness.co.in/Next-Gen-Logo.webp",
+        url: "https://www.nextgenstartup.co.in/Next-Gen-Logo.webp",
         width: 1200,
         height: 630,
-        alt: "NextGen Business Consultancy",
+        alt: "NextGen Startup Advisory",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "NEXT-GEN BUSINESS CONSULTANCY",
+    title: "NextGen Startup Advisory",
     description:
       "Your one-stop hub for Startup India, MSME support, tax exemptions, and investor connections.",
-    images: ["https://www.nextgenbusiness.co.in/Next-Gen-Logo.png"],
+    images: ["https://www.nextgenstartup.co.in/Next-Gen-Logo.png"],
     creator: "@NextGenBiz",
   },
 };
@@ -107,11 +107,11 @@ export default function RootLayout({ children }) {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://www.nextgenbusiness.co.in/#organization",
-    name: "NEXT-GEN BUSINESS CONSULTANCY",
-    url: "https://www.nextgenbusiness.co.in/",
-    logo: "https://www.nextgenbusiness.co.in/Next-Gen-Logo.png",
-    alternateName: "NEXT-GEN BUSINESS CONSULTANCY PRIVATE LIMITED",
+    "@id": "https://www.nextgenstartup.co.in/#organization",
+    name: "NextGen Startup Advisory",
+    url: "https://www.nextgenstartup.co.in/",
+    logo: "https://www.nextgenstartup.co.in/Next-Gen-Logo.png",
+    alternateName: "NextGen Startup Advisory PRIVATE LIMITED",
     description:
       "Your one-stop hub for Startup India, MSME support, tax exemptions, and investor connections.",
     sameAs: [
@@ -125,7 +125,7 @@ export default function RootLayout({ children }) {
         "@type": "ContactPoint",
         telephone: "+919033149731",
         contactType: "customer service",
-        email: "support@nextgenbusiness.co.in",
+        email: "support@nextgenstartup.co.in",
         areaServed: "IN",
         availableLanguage: ["en", "hi", "gu"],
       },
@@ -142,10 +142,10 @@ export default function RootLayout({ children }) {
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": "https://www.nextgenbusiness.co.in/#professionalservice",
-    name: "NEXT-GEN BUSINESS CONSULTANCY PRIVATE LIMITED",
-    image: "https://www.nextgenbusiness.co.in/Next-Gen-Logo.png",
-    url: "https://www.nextgenbusiness.co.in/",
+    "@id": "https://www.nextgenstartup.co.in/#professionalservice",
+    name: "NextGen Startup Advisory PRIVATE LIMITED",
+    image: "https://www.nextgenstartup.co.in/Next-Gen-Logo.png",
+    url: "https://www.nextgenstartup.co.in/",
     description:
       "Your one-stop hub for Startup India, MSME support, tax exemptions, and investor connections.",
     telephone: "+919898298149",

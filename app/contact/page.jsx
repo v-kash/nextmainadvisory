@@ -8,12 +8,12 @@ import Script from "next/script";
 import "./page.css";
 
 export const metadata = {
-  title: "Reach Out to NextGen Consultancy | Business Growth Partner",
+  title: "Reach Out to NextGen Advisory | Business Growth Partner",
   description:
-    "Contact NextGen Business Consultancy today – from compliance to growth strategies, we handle everything so you focus on your business",
+    "Contact NextGen Startup Advisory today – from compliance to growth strategies, we handle everything so you focus on your business",
 
   alternates: {
-    canonical: "https://www.nextgenbusiness.co.in/contact",
+    canonical: "https://www.nextgenstartup.co.in/contact",
   },
 
   robots: {
@@ -23,22 +23,22 @@ export const metadata = {
 
   // Open Graph (Facebook, LinkedIn, WhatsApp, Slack, etc.)
   openGraph: {
-    title: "Get in Touch | Expert Business Support at NextGen Consultancy",
+    title: "Get in Touch | Expert Business Support at NextGen Advisory",
     description:
-      "Reach out to NextGen Business Consultancy for registration, compliance, funding, and growth support for your startup or MSME.",
+      "Reach out to NextGen Startup Advisory for registration, compliance, funding, and growth support for your startup or MSME.",
     alternates: {
-      canonical: "https://www.nextgenbusiness.co.in/contact",
+      canonical: "https://www.nextgenstartup.co.in/contact",
     },
-    url: "https://www.nextgenbusiness.co.in/contact",
-    siteName: "NextGen Business Consultancy",
+    url: "https://www.nextgenstartup.co.in/contact",
+    siteName: "NextGen Startup Advisory",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://www.nextgenbusiness.co.in/og-image-contact.webp", // Contact page OG image
+        url: "https://www.nextgenstartup.co.in/og-image-contact.webp", // Contact page OG image
         width: 1200,
         height: 630,
-        alt: "NextGen Consultancy - Contact Us",
+        alt: "NextGen Advisory - Contact Us",
       },
     ],
   },
@@ -46,10 +46,10 @@ export const metadata = {
   // Twitter (Twitter/X)
   twitter: {
     card: "summary_large_image",
-    title: "Get in Touch | Expert Business Support at NextGen Consultancy",
+    title: "Get in Touch | Expert Business Support at NextGen Advisory",
     description:
-      "Reach out to NextGen Business Consultancy for registration, compliance, funding, and growth support for your startup or MSME.",
-    images: ["https://www.nextgenbusiness.co.in/og-image-contact.jpg"],
+      "Reach out to NextGen Startup Advisory for registration, compliance, funding, and growth support for your startup or MSME.",
+    images: ["https://www.nextgenstartup.co.in/og-image-contact.jpg"],
     creator: "@NextGenBiz", // optional
   },
 };
@@ -58,19 +58,19 @@ export default function Contact() {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "@id": "https://www.nextgenbusiness.co.in/contact#breadcrumb",
+    "@id": "https://www.nextgenstartup.co.in/contact#breadcrumb",
     itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.nextgenbusiness.co.in/",
+        item: "https://www.nextgenstartup.co.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Contact",
-        item: "https://www.nextgenbusiness.co.in/contact",
+        item: "https://www.nextgenstartup.co.in/contact",
       },
     ],
   };

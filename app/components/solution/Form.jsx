@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // Ensure the domain we send to the leads API is always in a consistent format
 const normalizeDomain = (domain) => {
-  const fallback = "nextgenbusiness.co.in";
+  const fallback = "nextgenstartup.co.in";
   if (!domain) return fallback;
   // Remove protocol if present
   let cleanDomain = domain.replace(/^https?:\/\//, "");
@@ -56,12 +56,12 @@ const Form = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    
+
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
-    
+
     // Clear status message
     if (status.message) {
       setStatus({ message: "", error: false });
@@ -129,7 +129,7 @@ const Form = () => {
         headers: {
           "Content-Type": "application/json",
           "x-api-key": process.env.NEXT_PUBLIC_API_KEY,
-          "Origin": `https://${normalizeDomain(process.env.NEXT_PUBLIC_DOMAIN)}`,
+          Origin: `https://${normalizeDomain(process.env.NEXT_PUBLIC_DOMAIN)}`,
         },
         credentials: "include",
         body: JSON.stringify(payload),

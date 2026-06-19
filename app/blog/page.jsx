@@ -8,47 +8,47 @@ import { getAllBlogs } from "./data/blogData";
 import "./page.css";
 
 export const metadata = {
-  title: "Business Insights & Startup Blogs | NextGen Consultancy",
+  title: "Business Insights & Startup Blogs | NextGen Advisory",
   description:
-    "Read expert blogs on startups, MSME growth, funding, compliance, and business strategy by NextGen Business Consultancy.",
+    "Read expert blogs on startups, MSME growth, funding, compliance, and business strategy by NextGen Startup Advisory.",
 
   alternates: {
-    canonical: "https://www.nextgenbusiness.co.in/blog",
+    canonical: "https://www.nextgenstartup.co.in/blog",
   },
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Business Insights & Startup Blogs | NextGen Consultancy",
+    title: "Business Insights & Startup Blogs | NextGen Advisory",
     description:
       "Startup guides, funding insights, and business growth strategies.",
-    url: "https://www.nextgenbusiness.co.in/blog",
-    siteName: "NextGen Business Consultancy",
+    url: "https://www.nextgenstartup.co.in/blog",
+    siteName: "NextGen Startup Advisory",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://www.nextgenbusiness.co.in/Next-Gen-Logo.webp",
+        url: "https://www.nextgenstartup.co.in/Next-Gen-Logo.webp",
         width: 1200,
         height: 630,
-        alt: "NextGen Business Consultancy - Blog",
+        alt: "NextGen Startup Advisory - Blog",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Startup & Business Blogs | NextGen Consultancy",
+    title: "Startup & Business Blogs | NextGen Advisory",
     description:
       "Expert-written blogs on startups, funding, and business compliance.",
-    images: ["https://www.nextgenbusiness.co.in/Next-Gen-Logo.png"],
+    images: ["https://www.nextgenstartup.co.in/Next-Gen-Logo.png"],
     creator: "@NextGenBiz",
   },
 };
 
 export default function About() {
-  const baseUrl = "https://www.nextgenbusiness.co.in";
+  const baseUrl = "https://www.nextgenstartup.co.in";
   const blogUrl = `${baseUrl}/blog`;
   const imageUrl = `${baseUrl}/Next-Gen-Logo.png`;
   const allBlogs = getAllBlogs();
@@ -58,13 +58,13 @@ export default function About() {
     "@context": "https://schema.org",
     "@type": "Blog",
     "@id": `${blogUrl}#blog`,
-    name: "Business Insights & Startup Blogs | NextGen Consultancy",
+    name: "Business Insights & Startup Blogs | NextGen Advisory",
     description:
-      "Read expert blogs on startups, MSME growth, funding, compliance, and business strategy by NextGen Business Consultancy.",
+      "Read expert blogs on startups, MSME growth, funding, compliance, and business strategy by NextGen Startup Advisory.",
     url: blogUrl,
     publisher: {
       "@type": "Organization",
-      name: "NextGen Business Consultancy",
+      name: "NextGen Startup Advisory",
       url: baseUrl,
       logo: {
         "@type": "ImageObject",
@@ -86,7 +86,7 @@ export default function About() {
         : undefined,
       author: {
         "@type": "Organization",
-        name: blog.author?.name || "NextGen Business Consultancy",
+        name: blog.author?.name || "NextGen Startup Advisory",
         url: blog.author?.url || baseUrl,
       },
       articleSection: blog.category,
@@ -122,7 +122,7 @@ export default function About() {
     "@type": "ItemList",
     "@id": `${blogUrl}#itemlist`,
     name: "Blog Posts",
-    description: "List of all blog posts from NextGen Business Consultancy",
+    description: "List of all blog posts from NextGen Startup Advisory",
     numberOfItems: allBlogs.length,
     itemListElement: allBlogs.map((blog, index) => ({
       "@type": "ListItem",

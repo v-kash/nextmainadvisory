@@ -21,7 +21,7 @@ export default function GoogleReviewSlider() {
     },
     {
       name: "Aniket Raj",
-      text: "I had a great experience with NEXT-GEN BUSINESS CONSULTANCY PRIVATE LIMITED. Their team helped my company get the Startup India Certificate along with the DSC smoothly and efficiently. The team members were humble, professional, and always ready to assist. Overall, they provided excellent service and I highly recommend them!",
+      text: "I had a great experience with NextGen Startup Advisory PRIVATE LIMITED. Their team helped my company get the Startup India Certificate along with the DSC smoothly and efficiently. The team members were humble, professional, and always ready to assist. Overall, they provided excellent service and I highly recommend them!",
     },
     {
       name: "Jitendra Jain",

@@ -27,7 +27,7 @@ export default function FiveCardCarousel() {
       if (iframe?.contentWindow) {
         iframe.contentWindow.postMessage(
           '{"event":"command","func":"pauseVideo","args":""}',
-          "*"
+          "*",
         );
       }
     });
@@ -51,7 +51,7 @@ export default function FiveCardCarousel() {
     if (centerIframe?.contentWindow) {
       centerIframe.contentWindow.postMessage(
         '{"event":"command","func":"playVideo","args":""}',
-        "*"
+        "*",
       );
     }
   }, [current, mounted]);
@@ -123,10 +123,10 @@ export default function FiveCardCarousel() {
                   <iframe
                     ref={(el) => (videoRefs.current[i] = el)}
                     src={`https://www.youtube-nocookie.com/embed/${getVideoId(
-                      card.url
+                      card.url,
                     )}?enablejsapi=1&mute=1&loop=1&playlist=${getVideoId(
-                      card.url
-                    )}&playsinline=1&rel=0&modestbranding=1&origin=https://www.nextgenbusiness.co.in`}
+                      card.url,
+                    )}&playsinline=1&rel=0&modestbranding=1&origin=https://www.nextgenstartup.co.in`}
                     referrerPolicy="origin"
                     title={`Video ${card.id}`}
                     frameBorder="0"

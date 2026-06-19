@@ -10,11 +10,11 @@ import Script from "next/script";
 import "./page.css";
 
 export const metadata = {
-  title: "NextGen Consultancy India | Trusted Startup Growth Partner",
+  title: "NextGen Advisory India | Trusted Startup Growth Partner",
   description:
-    "Learn how NextGen Consultancy supports entrepreneurs with Startup India certification, MSME compliance, and strategic business growth.",
+    "Learn how NextGen Advisory supports entrepreneurs with Startup India certification, MSME compliance, and strategic business growth.",
   alternates: {
-    canonical: "https://www.nextgenbusiness.co.in/about",
+    canonical: "https://www.nextgenstartup.co.in/about",
   },
 
   robots: {
@@ -24,19 +24,19 @@ export const metadata = {
 
   // Open Graph (Facebook, LinkedIn, WhatsApp, Slack, etc.)
   openGraph: {
-    title: "Discover NextGen Business Consultancy | From Idea to Growth",
+    title: "Discover NextGen Startup Advisory | From Idea to Growth",
     description:
-      "From registration to business expansion, NextGen Business Consultancy enables founders to focus on growth while we handle the rest.",
-    url: "https://www.nextgenbusiness.co.in/about",
-    siteName: "NextGen Business Consultancy",
+      "From registration to business expansion, NextGen Startup Advisory enables founders to focus on growth while we handle the rest.",
+    url: "https://www.nextgenstartup.co.in/about",
+    siteName: "NextGen Startup Advisory",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://www.nextgenbusiness.co.in/og-image-about.webp", // About page OG image
+        url: "https://www.nextgenstartup.co.in/og-image-about.webp", // About page OG image
         width: 1200,
         height: 630,
-        alt: "NextGen Consultancy - About Us",
+        alt: "NextGen Advisory - About Us",
       },
     ],
   },
@@ -44,10 +44,10 @@ export const metadata = {
   // Twitter (Twitter/X)
   twitter: {
     card: "summary_large_image",
-    title: "Discover NextGen Business Consultancy | From Idea to Growth",
+    title: "Discover NextGen Startup Advisory | From Idea to Growth",
     description:
-      "From registration to business expansion, NextGen Business Consultancy enables founders to focus on growth while we handle the rest.",
-    images: ["https://www.nextgenbusiness.co.in/og-image-about.jpg"],
+      "From registration to business expansion, NextGen Startup Advisory enables founders to focus on growth while we handle the rest.",
+    images: ["https://www.nextgenstartup.co.in/og-image-about.jpg"],
   },
 };
 
@@ -55,19 +55,19 @@ export default function About() {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "@id": "https://www.nextgenbusiness.co.in/about#breadcrumb",
+    "@id": "https://www.nextgenstartup.co.in/about#breadcrumb",
     itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.nextgenbusiness.co.in/",
+        item: "https://www.nextgenstartup.co.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "About",
-        item: "https://www.nextgenbusiness.co.in/about",
+        item: "https://www.nextgenstartup.co.in/about",
       },
     ],
   };

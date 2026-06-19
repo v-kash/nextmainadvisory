@@ -16,7 +16,7 @@ const initialStatus = {
 
 // Ensure the domain we send to the leads API is always in a consistent format
 const normalizeDomain = (domain) => {
-  const fallback = "nextgenbusiness.co.in";
+  const fallback = "nextgenstartup.co.in";
   if (!domain) return fallback;
   // Remove protocol if present
   let cleanDomain = domain.replace(/^https?:\/\//, "");
@@ -84,7 +84,7 @@ export default function CTA() {
     const trimmedName = formData.name.trim();
     const trimmedPhone = formData.phone.trim();
     const domainValue = normalizeDomain(process.env.NEXT_PUBLIC_DOMAIN);
-    const fallbackEmail = "subscriber@nextgenbusiness.co.in";
+    const fallbackEmail = "subscriber@nextgenstartup.co.in";
 
     const newErrors = {};
     if (!trimmedName) newErrors.name = "Name is required";

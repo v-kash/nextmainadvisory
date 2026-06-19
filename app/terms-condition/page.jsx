@@ -4,9 +4,9 @@ import "../privacy-policy/page.css";
 import Hero from "../components/tnc/Hero";
 
 export const metadata = {
-  title: "Terms & Conditions | NextGen Business Consultancy India",
+  title: "Terms & Conditions | NextGen Startup Advisory India",
   description:
-    "Read the official Terms & Conditions of NextGen Business Consultancy. Understand service usage, legal obligations, limitations of liability, refunds, and governing laws applicable in India.",
+    "Read the official Terms & Conditions of NextGen Startup Advisory. Understand service usage, legal obligations, limitations of liability, refunds, and governing laws applicable in India.",
 
   robots: {
     index: true,
@@ -14,15 +14,15 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.nextgenbusiness.co.in/terms-condition",
+    canonical: "https://www.nextgenstartup.co.in/terms-condition",
   },
 
   openGraph: {
-    title: "Terms & Conditions | NextGen Business Consultancy",
+    title: "Terms & Conditions | NextGen Startup Advisory",
     description:
-      "Official Terms and Conditions governing the use of services provided by NextGen Business Consultancy.",
-    url: "https://www.nextgenbusiness.co.in/terms-condition",
-    siteName: "NextGen Business Consultancy",
+      "Official Terms and Conditions governing the use of services provided by NextGen Startup Advisory.",
+    url: "https://www.nextgenstartup.co.in/terms-condition",
+    siteName: "NextGen Startup Advisory",
     locale: "en_IN",
     type: "website",
   },
@@ -30,9 +30,8 @@ export const metadata = {
   // Twitter (Twitter/X)
   twitter: {
     card: "summary_large_image",
-    title: "Terms & Conditions | NextGen Business Consultancy",
-    description:
-      "Official Terms and Conditions of NextGen Business Consultancy.",
+    title: "Terms & Conditions | NextGen Startup Advisory",
+    description: "Official Terms and Conditions of NextGen Startup Advisory.",
   },
 };
 
@@ -356,7 +355,7 @@ export default function TermsConditions() {
             <div className="bg-gray-50 text-gray-800 p-8 md:p-16 border-t border-gray-200 animate-fade-in">
               <div className="max-w-4xl">
                 <p className="text-gray-700 leading-relaxed text-lg mb-6 hover:text-gray-900 transition-colors duration-300">
-                  At NEXT-GEN BUSINESS CONSULTANCY PRIVATE LIMITED
+                  At NextGen Startup Advisory PRIVATE LIMITED
                   (&quot;Company,&quot; &quot;we,&quot; &quot;our,&quot; or
                   &quot;us&quot;), we are committed to maintaining transparency
                   and fairness in all our dealings with clients, visitors, and
@@ -652,10 +651,10 @@ export default function TermsConditions() {
                   Service, do not hesitate to contact us at
                 </p>
                 <a
-                  href="mailto:support@nextgenbusiness.co.in"
+                  href="mailto:support@nextgenstartup.co.in"
                   className="inline-block bg-white text-[#245586] hover:bg-gray-100 px-10 py-4 rounded-lg font-semibold text-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                 >
-                  support@nextgenbusiness.co.in
+                  support@nextgenstartup.co.in
                 </a>
               </div>
             </div>

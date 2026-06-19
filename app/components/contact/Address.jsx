@@ -206,10 +206,10 @@ const Address = () => {
                 </h4>
 
                 <a
-                  href="tel:+919737388388"
+                  href="tel:+916357665925"
                   className="text-sm font-extrabold text-[#245586] hover:text-[#1c4268]"
                 >
-                  +91 9737388388
+                  +91 6357665925
                 </a>
 
                 <p className="text-xs text-slate-500 font-medium">
@@ -265,7 +265,7 @@ const Address = () => {
                   href="mailto:info@nextgenconsultancy.in"
                   className="text-sm font-extrabold text-[#245586] break-all hover:text-[#1c4268]"
                 >
-                  support@nextgenbusiness.co.in
+                  support@nextgenstartup.co.in
                 </a>
                 <p className="text-xs text-slate-500 font-medium">
                   24-hour response time guarantee

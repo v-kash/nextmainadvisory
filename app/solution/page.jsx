@@ -12,9 +12,9 @@ import Script from "next/script";
 export const metadata = {
   title: "NextGen Services | Compliance, Funding & Growth for Startups & MSMEs",
   description:
-    "From registrations to investor access – NextGen Business Consultancy services help businesses grow faster and stay compliant.",
+    "From registrations to investor access – NextGen Startup Advisory services help businesses grow faster and stay compliant.",
   alternates: {
-    canonical: "https://www.nextgenbusiness.co.in/solution",
+    canonical: "https://www.nextgenstartup.co.in/solution",
   },
 
   robots: {
@@ -26,17 +26,17 @@ export const metadata = {
     title:
       "NextGen Services | From Compliance to Digital Marketing & Expansion",
     description:
-      "NextGen Business Consultancy offers tailored services to empower startups & MSMEs with funding, compliance, and digital growth.",
-    url: "https://www.nextgenbusiness.co.in/solution",
-    siteName: "NextGen Business Consultancy",
+      "NextGen Startup Advisory offers tailored services to empower startups & MSMEs with funding, compliance, and digital growth.",
+    url: "https://www.nextgenstartup.co.in/solution",
+    siteName: "NextGen Startup Advisory",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://www.nextgenbusiness.co.in/og-image-solution.webp",
+        url: "https://www.nextgenstartup.co.in/og-image-solution.webp",
         width: 1200,
         height: 630,
-        alt: "NextGen Consultancy - Services",
+        alt: "NextGen Advisory - Services",
       },
     ],
   },
@@ -46,8 +46,8 @@ export const metadata = {
     title:
       "NextGen Services | From Compliance to Digital Marketing & Expansion",
     description:
-      "NextGen Business Consultancy offers tailored services to empower startups & MSMEs with funding, compliance, and digital growth.",
-    images: ["https://www.nextgenbusiness.co.in/og-image-solution.jpg"],
+      "NextGen Startup Advisory offers tailored services to empower startups & MSMEs with funding, compliance, and digital growth.",
+    images: ["https://www.nextgenstartup.co.in/og-image-solution.jpg"],
     creator: "@NextGenBiz",
   },
 };
@@ -56,19 +56,19 @@ export default function Solution() {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "@id": "https://www.nextgenbusiness.co.in/solution#breadcrumb",
+    "@id": "https://www.nextgenstartup.co.in/solution#breadcrumb",
     itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.nextgenbusiness.co.in/",
+        item: "https://www.nextgenstartup.co.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Services",
-        item: "https://www.nextgenbusiness.co.in/solution",
+        item: "https://www.nextgenstartup.co.in/solution",
       },
     ],
   };
@@ -76,7 +76,7 @@ export default function Solution() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": "https://www.nextgenbusiness.co.in/solution#faqpage",
+    "@id": "https://www.nextgenstartup.co.in/solution#faqpage",
     mainEntity: [
       {
         "@type": "Question",
@@ -133,13 +133,13 @@ export default function Solution() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://www.nextgenbusiness.co.in/solution#service",
+    "@id": "https://www.nextgenstartup.co.in/solution#service",
     name: "Business Consultancy Services",
     description:
       "Comprehensive business consultancy services including Startup India Registration, MSME Registration, Tax Exemptions, Funding Support, and Compliance Management.",
     provider: {
       "@type": "ProfessionalService",
-      "@id": "https://www.nextgenbusiness.co.in/#professionalservice",
+      "@id": "https://www.nextgenstartup.co.in/#professionalservice",
     },
     serviceType: [
       "Business Consulting",

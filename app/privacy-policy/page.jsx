@@ -4,12 +4,12 @@ import "./page.css";
 import Hero from "../components/privacy/Hero";
 
 export const metadata = {
-  title: "Privacy Policy | NextGen Business Consultancy India",
+  title: "Privacy Policy | NextGen Startup Advisory India",
   description:
-    "Explore how NextGen Business Consultancy collects, uses, stores, and protects your personal data in compliance with Indian laws and industry best practices.",
+    "Explore how NextGen Startup Advisory collects, uses, stores, and protects your personal data in compliance with Indian laws and industry best practices.",
 
   alternates: {
-    canonical: "https://www.nextgenbusiness.co.in/privacy-policy",
+    canonical: "https://www.nextgenstartup.co.in/privacy-policy",
   },
 
   robots: {
@@ -18,19 +18,19 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Privacy Policy | NextGen Business Consultancy",
+    title: "Privacy Policy | NextGen Startup Advisory",
     description:
-      "Understand how your personal information is handled, protected, and used responsibly by NextGen Business Consultancy.",
-    url: "https://www.nextgenbusiness.co.in/privacy-policy",
-    siteName: "NextGen Business Consultancy",
+      "Understand how your personal information is handled, protected, and used responsibly by NextGen Startup Advisory.",
+    url: "https://www.nextgenstartup.co.in/privacy-policy",
+    siteName: "NextGen Startup Advisory",
     type: "website",
   },
 
   twitter: {
     card: "summary",
-    title: "Privacy Policy | NextGen Business Consultancy",
+    title: "Privacy Policy | NextGen Startup Advisory",
     description:
-      "Learn how NextGen Business Consultancy safeguards your personal data and privacy.",
+      "Learn how NextGen Startup Advisory safeguards your personal data and privacy.",
   },
 };
 
@@ -482,10 +482,10 @@ export default function PrivacyPolicy() {
                   Policy, do not hesitate to contact us at
                 </p>
                 <a
-                  href="mailto:support@nextgenbusiness.co.in"
+                  href="mailto:support@nextgenstartup.co.in"
                   className="inline-block bg-white text-[#245586] hover:bg-gray-100 px-10 py-4 rounded-lg font-semibold text-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 mt-6"
                 >
-                  support@nextgenbusiness.co.in
+                  support@nextgenstartup.co.in
                 </a>
               </div>
             </div>

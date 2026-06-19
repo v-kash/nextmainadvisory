@@ -6,7 +6,13 @@ import "aos/dist/aos.css";
 import { motion } from "framer-motion";
 
 // React Icons
-import { FaRegLightbulb, FaHammer, FaRocket, FaGem, FaMountain } from "react-icons/fa";
+import {
+  FaRegLightbulb,
+  FaHammer,
+  FaRocket,
+  FaGem,
+  FaMountain,
+} from "react-icons/fa";
 
 const Process = () => {
   useEffect(() => {
@@ -21,7 +27,8 @@ const Process = () => {
     {
       icon: <FaRegLightbulb className="w-6 h-6 md:w-8 md:h-8 text-white" />,
       title: "The Spark",
-      description: "It all begins with a small thought that can change the world.",
+      description:
+        "It all begins with a small thought that can change the world.",
     },
     {
       icon: <FaMountain className="w-6 h-6 md:w-8 md:h-8 text-white" />,
@@ -31,7 +38,8 @@ const Process = () => {
     {
       icon: <FaHammer className="w-6 h-6 md:w-8 md:h-8 text-white" />,
       title: "The Forge",
-      description: "We give your vision strength through structure and strategy.",
+      description:
+        "We give your vision strength through structure and strategy.",
     },
     {
       icon: <FaRocket className="w-6 h-6 md:w-8 md:h-8 text-white" />,
@@ -57,7 +65,7 @@ const Process = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Next-Gen Business Consultancy Growth
+          NextGen Startup Advisory Growth
           <span className="absolute left-0 -bottom-3 h-1 bg-[#245586] w-0 transition-all duration-500 group-hover:w-full"></span>
         </motion.h2>
       </div>
@@ -75,23 +83,36 @@ const Process = () => {
             <div
               className="absolute -top-8 rotate-45 w-16 h-16 rounded-xl shadow-lg flex items-center justify-center ring-4 ring-white/50 z-10 
   transition-transform duration-300 group-hover:scale-110"
-              style={{ backgroundColor: solidColor, left: "45%", transform: "translateX(-50%) rotate(45deg)" }}
+              style={{
+                backgroundColor: solidColor,
+                left: "45%",
+                transform: "translateX(-50%) rotate(45deg)",
+              }}
             >
-              <div className="transition-transform duration-300 group-hover:scale-110" style={{ transform: "rotate(-45deg)" }}>
+              <div
+                className="transition-transform duration-300 group-hover:scale-110"
+                style={{ transform: "rotate(-45deg)" }}
+              >
                 {step.icon}
               </div>
             </div>
 
             {/* Card */}
-            <div className="bg-white rounded-xl shadow-xl pt-16 pb-6 px-4 text-center relative h-[230px] w-[230px] flex flex-col justify-between 
-    transition-transform duration-300 group-hover:scale-105">
+            <div
+              className="bg-white rounded-xl shadow-xl pt-16 pb-6 px-4 text-center relative h-[230px] w-[230px] flex flex-col justify-between 
+    transition-transform duration-300 group-hover:scale-105"
+            >
               <div>
-                <h3 className="text-lg font-semibold text-gray-800">{step.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {step.title}
+                </h3>
                 <p className="text-gray-500 text-sm mt-2">{step.description}</p>
               </div>
-              <div className="h-2 w-full rounded-b-xl" style={{ backgroundColor: solidColor }} />
+              <div
+                className="h-2 w-full rounded-b-xl"
+                style={{ backgroundColor: solidColor }}
+              />
             </div>
-
           </div>
         ))}
       </div>
@@ -115,9 +136,14 @@ const Process = () => {
 
             {/* Card */}
             <div className="bg-white rounded-xl overflow-hidden shadow-xl pt-12 pb-5 px-4 text-center relative">
-              <h3 className="text-base font-semibold text-gray-800">{step.title}</h3>
+              <h3 className="text-base font-semibold text-gray-800">
+                {step.title}
+              </h3>
               <p className="text-gray-500 text-sm mt-2">{step.description}</p>
-              <div className="mt-6 h-2 w-full rounded-b-xl" style={{ backgroundColor: solidColor }} />
+              <div
+                className="mt-6 h-2 w-full rounded-b-xl"
+                style={{ backgroundColor: solidColor }}
+              />
             </div>
           </div>
         ))}

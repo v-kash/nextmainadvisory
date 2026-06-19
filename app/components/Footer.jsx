@@ -11,7 +11,7 @@ export default function Footer() {
         {/* --- Column 1: Logo + Tagline --- */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6">
           <Image
-            src="/images/whiteLogo.webp"
+            src="/images/whiteLogoAdvisory.png"
             alt="Next-Gen Logo"
             width={220}
             height={60}
@@ -134,9 +134,8 @@ export default function Footer() {
             <div className="flex items-start justify-center md:justify-start gap-2">
               <MapPin className="w-5 h-5 text-white mt-0.5" />
               <p>
-              2ND FLOOR, PRESIDENT PLAZA, SG HIGHWAY, THALTEJ,
-              <br />
-              AHMEDABAD - 380054
+                46 Fanepet, 2nd Street, Subbu Towers, <br />
+                3rd Floor ,Nandanam, 600035
               </p>
             </div>
 
@@ -149,7 +148,7 @@ export default function Footer() {
             {/* Phone */}
             <div className="flex items-center justify-center md:justify-start gap-2">
               <Phone className="w-5 h-5 text-white" />
-              <p>+91-9737388388</p>
+              <p>+91-6357665925</p>
             </div>
           </div>
         </div>
@@ -159,13 +158,13 @@ export default function Footer() {
       <div className="container mx-auto max-w-7xl px-6 py-8 text-[14px] sm:text-[11px] opacity-80 leading-relaxed border-t border-[#3278bd]">
         <p className={` mb-2`}>
           Important Notice: All payments for our services must be made
-          exclusively to Next-Gen Business Consultancy Pvt. Ltd. through a
-          Current Account on NEFT, IMPS, RTGS, or approved digital payment
-          platforms (Cashfree, Razorpay, Paytm/Axis). We do not accept payments
-          through personal accounts or third-party intermediaries.
+          exclusively to NextGen Startup Advisory Pvt. Ltd. through a Current
+          Account on NEFT, IMPS, RTGS, or approved digital payment platforms
+          (Cashfree, Razorpay, Paytm/Axis). We do not accept payments through
+          personal accounts or third-party intermediaries.
         </p>
         <p className="mb-4">
-          Disclaimer: Next-Gen Business Consultancy Pvt. Ltd. is a private
+          Disclaimer: NextGen Startup Advisory Pvt. Ltd. is a private
           consultancy firm specializing in start-up advisory services across
           India. We provide professional guidance tailored to the needs of
           emerging enterprises. We operate independently and are not affiliated
@@ -195,7 +194,7 @@ export default function Footer() {
       {/* ===== Footer Bottom ===== */}
       <div className="bg-[#1c4268] border-t border-[#3278bd] py-6">
         <div className="container mx-auto max-w-7xl px-6 flex justify-center items-center text-sm opacity-90">
-          <p>© 2025 Next-Gen Business Consultancy PVT. LTD</p>
+          <p>© 2025 NextGen Startup Advisory PVT. LTD</p>
         </div>
       </div>
     </footer>

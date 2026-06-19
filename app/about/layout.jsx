@@ -3,9 +3,9 @@ import Footer from "../components/Footer";
 
 export const metadata = {
   title:
-    "About NextGen Business Consultancy | Trusted Startup & MSME Growth Partner in India",
+    "About NextGen Startup Advisory | Trusted Startup & MSME Growth Partner in India",
   description:
-    "Learn about NextGen Business Consultancy—India’s trusted partner for startups and MSMEs offering compliance, funding, and scalable growth solutions.",
+    "Learn about NextGen Startup Advisory—India’s trusted partner for startups and MSMEs offering compliance, funding, and scalable growth solutions.",
 
   robots: {
     index: false,
@@ -13,7 +13,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.nextgenbusiness.co.in/about",
+    canonical: "https://www.nextgenstartup.co.in/about",
   },
 };
 

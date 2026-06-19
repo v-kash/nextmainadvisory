@@ -41,18 +41,23 @@ const Timeline = () => {
 
       <div className="max-w-7xl mx-auto text-center mb-20 relative z-10">
         <div className="text-center mb-10">
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
             <motion.h2
               className="text-4xl md:text-5xl font-bold text-[#1c4268] mt-4 relative inline-block cursor-pointer group"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              Next-gen Business Consultancy&apos;s Journey to Leadership
+              NextGen Startup Advisory&apos;s Journey to Leadership
               <span className="absolute left-0 -bottom-3 h-1 bg-[#245586] w-0 transition-all duration-500 group-hover:w-full"></span>
             </motion.h2>
             <p className="text-gray-600 md:text-lg max-w-3xl mx-auto leading-relaxed mt-8">
-              Every milestone tells a story of innovation, growth, and dedication
+              Every milestone tells a story of innovation, growth, and
+              dedication
             </p>
           </motion.div>
         </div>
@@ -90,10 +95,12 @@ const Timeline = () => {
                       {item.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 text-center leading-snug mb-4 
+                  <h3
+                    className="text-xl font-bold text-slate-800 text-center leading-snug mb-4 
                       group-hover:text-transparent group-hover:bg-clip-text 
                       group-hover:bg-gradient-to-r group-hover:from-[#2e6dac] group-hover:to-[#1c4268]
-                      transition-all duration-300">
+                      transition-all duration-300"
+                  >
                     {item.title}
                   </h3>
                   <div

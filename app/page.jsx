@@ -22,11 +22,11 @@ const GoogleReview = dynamic(() => import("./components/home/GoogleReview"), {
 });
 
 export const metadata = {
-  title: "NextGen Business Consultancy | India's Startup Growth Hub",
+  title: "NextGen Startup Advisory | India's Startup Growth Hub",
   description:
     "Your one-stop hub for Startup India, MSME support, tax exemptions, and investor connections. NextGen powers India's startup growth journey.",
   alternates: {
-    canonical: "https://www.nextgenbusiness.co.in/",
+    canonical: "https://www.nextgenstartup.co.in/",
   },
 
   robots: {
@@ -35,29 +35,29 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "India's Trusted Partner for Startup Success | NextGen Consultancy",
+    title: "India's Trusted Partner for Startup Success | NextGen Advisory",
     description:
-      "Get expert guidance on registrations, tax holidays, compliance & investor linkage with NextGen Consultancy.",
-    url: "https://www.nextgenbusiness.co.in/",
-    siteName: "NextGen Business Consultancy",
+      "Get expert guidance on registrations, tax holidays, compliance & investor linkage with NextGen Advisory.",
+    url: "https://www.nextgenstartup.co.in/",
+    siteName: "NextGen Startup Advisory",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://www.nextgenbusiness.co.in/og-image-home.webp",
+        url: "https://www.nextgenstartup.co.in/og-image-home.webp",
         width: 1200,
         height: 630,
-        alt: "NextGen Consultancy - Startup Growth Hub",
+        alt: "NextGen Advisory - Startup Growth Hub",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "India's Trusted Partner for Startup Success | NextGen Consultancy",
+    title: "India's Trusted Partner for Startup Success | NextGen Advisory",
     description:
-      "Get expert guidance on registrations, tax holidays, compliance & investor linkage with NextGen Consultancy.",
-    images: ["https://www.nextgenbusiness.co.in/og-image-home.jpg"],
+      "Get expert guidance on registrations, tax holidays, compliance & investor linkage with NextGen Advisory.",
+    images: ["https://www.nextgenstartup.co.in/og-image-home.jpg"],
     creator: "@NextGenBiz",
   },
 };
@@ -66,7 +66,7 @@ export default function Home() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": "https://www.nextgenbusiness.co.in/#faqpage",
+    "@id": "https://www.nextgenstartup.co.in/#faqpage",
     mainEntity: [
       {
         "@type": "Question",
@@ -122,13 +122,13 @@ export default function Home() {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "@id": "https://www.nextgenbusiness.co.in/#breadcrumb",
+    "@id": "https://www.nextgenstartup.co.in/#breadcrumb",
     itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.nextgenbusiness.co.in/",
+        item: "https://www.nextgenstartup.co.in/",
       },
     ],
   };

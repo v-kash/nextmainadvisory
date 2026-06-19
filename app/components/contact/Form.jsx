@@ -5,7 +5,7 @@ import Link from "next/link";
 
 // Ensure the domain we send to the leads API is always in a consistent format
 const normalizeDomain = (domain) => {
-  const fallback = "nextgenbusiness.co.in";
+  const fallback = "nextgenstartup.co.in";
   if (!domain) return fallback;
   // Remove protocol if present
   let cleanDomain = domain.replace(/^https?:\/\//, "");
@@ -64,37 +64,37 @@ const parseJsonSafely = async (response, context = "lead-api") => {
 };
 
 const ContactPage = () => {
-const [formData, setFormData] = useState({
-  name: "",
-  email: "",
-  phone: "",
-  state: "",
-  message: "",
-});
-const states = [
-  "Andhra Pradesh",
-  "Arunachal Pradesh",
-  "Assam",
-  "Bihar",
-  "Chhattisgarh",
-  "Goa",
-  "Gujarat",
-  "Haryana",
-  "Himachal Pradesh",
-  "Jharkhand",
-  "Karnataka",
-  "Kerala",
-  "Madhya Pradesh",
-  "Maharashtra",
-  "Odisha",
-  "Punjab",
-  "Rajasthan",
-  "Tamil Nadu",
-  "Telangana",
-  "Uttar Pradesh",
-  "Uttarakhand",
-  "West Bengal",
-];
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    state: "",
+    message: "",
+  });
+  const states = [
+    "Andhra Pradesh",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Tamil Nadu",
+    "Telangana",
+    "Uttar Pradesh",
+    "Uttarakhand",
+    "West Bengal",
+  ];
   const [status, setStatus] = useState({
     loading: false,
     message: "",
@@ -104,11 +104,11 @@ const states = [
   const [errors, setErrors] = useState({});
   const [focusedField, setFocusedField] = useState(null);
   const [isStateOpen, setIsStateOpen] = useState(false);
-const [stateSearch, setStateSearch] = useState("");
+  const [stateSearch, setStateSearch] = useState("");
 
-const filteredStates = states.filter((state) =>
-  state.toLowerCase().includes(stateSearch.toLowerCase())
-);
+  const filteredStates = states.filter((state) =>
+    state.toLowerCase().includes(stateSearch.toLowerCase()),
+  );
 
   const serviceOptions = [
     "Loans",
@@ -203,20 +203,20 @@ const filteredStates = states.filter((state) =>
       console.error("reCAPTCHA token generation failed:", error);
       setStatus({
         loading: false,
-        message:
-          "Verification failed. Please refresh the page and try again.",
+        message: "Verification failed. Please refresh the page and try again.",
         error: true,
       });
       return;
     }
 
     try {
-      const payload = {name: formData.name,
-  email: formData.email,
-  phone: formData.phone,
-  state: formData.state,
-  city: formData.city,
-  message: formData.message,
+      const payload = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        state: formData.state,
+        city: formData.city,
+        message: formData.message,
         recaptchaToken,
       };
 
@@ -232,7 +232,7 @@ const filteredStates = states.filter((state) =>
       // });
 
       // 2️⃣ Call your LMS API (new one)
-      const response  = await fetch("/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -259,13 +259,13 @@ const filteredStates = states.filter((state) =>
           payload,
           error: errorMessage,
         });
-if (!formData.state) {
-  newErrors.state = "State is required";
-}
+        if (!formData.state) {
+          newErrors.state = "State is required";
+        }
 
-if (!formData.city.trim()) {
-  newErrors.city = "City is required";
-}
+        if (!formData.city.trim()) {
+          newErrors.city = "City is required";
+        }
         setStatus({
           loading: false,
           message: errorMessage,

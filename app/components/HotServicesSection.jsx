@@ -120,7 +120,7 @@ export const HotServicesSection = () => {
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Premium Header */}
-          <div className="text-center mb-20">
+          <div className=" mb-20">
             {/* Floating Badge */}
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/90 backdrop-blur-xl rounded-full shadow-lg border border-gray-200/50 mb-8 hover:shadow-xl transition-all duration-300">
               <div className="relative flex items-center gap-2">
@@ -139,7 +139,7 @@ export const HotServicesSection = () => {
             </div>
 
             {/* Main Title with Gradient */}
-            <div className="relative inline-block mb-6">
+            <div className="relative text-center inline-block mb-6">
               <motion.h2
                 className="text-4xl md:text-5xl font-bold text-[#1c4268] mb-4 relative inline-block cursor-pointer group"
                 initial={{ opacity: 0, y: 20 }}
@@ -157,7 +157,7 @@ export const HotServicesSection = () => {
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-[#1c4268] to-[#3278bd] rounded-full"></div>
             </div>
 
-            <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed mt-8">
+            <p className=" text-center text-gray-600 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed mt-8">
               Access India&apos;s most prestigious funding programs with
               streamlined approval processes and dedicated expert support
             </p>

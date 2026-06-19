@@ -1,9 +1,9 @@
 import FestivalCelebrationSection from "../../components/about/FestivalCelebrationSection";
 
 export const metadata = {
-  title: "Festival Celebrations & Events | NextGen Business Consultancy",
+  title: "Festival Celebrations & Events | NextGen Startup Advisory",
   description:
-    "Explore festival celebrations, corporate events, and cultural moments at NextGen Business Consultancy that reflect our values, teamwork, and vibrant work culture.",
+    "Explore festival celebrations, corporate events, and cultural moments at NextGen Startup Advisory that reflect our values, teamwork, and vibrant work culture.",
 
   robots: {
     index: false,
@@ -11,7 +11,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.nextgenbusiness.co.in/events",
+    canonical: "https://www.nextgenstartup.co.in/events",
   },
 };
 

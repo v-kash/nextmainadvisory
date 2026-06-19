@@ -3,7 +3,7 @@ import { businessTypes } from "./service/data/businessData";
 import { getAllBlogs } from "./blog/data/blogData";
 
 export default function sitemap() {
-  const baseUrl = "https://www.nextgenbusiness.co.in";
+  const baseUrl = "https://www.nextgenstartup.co.in";
   const lastModified = new Date().toISOString();
 
   // Static pages

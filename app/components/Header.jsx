@@ -15,14 +15,13 @@ export const Header = () => {
     { label: "Our Story", href: "/about" },
     { label: "Solution", href: "/solution" },
     { label: "Contact", href: "/contact" },
-     { label: "Blog", href: "/blog" },
-
+    { label: "Blog", href: "/blog" },
   ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListenenpm("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -35,7 +34,7 @@ export const Header = () => {
         {/* Logo */}
         <div className="flex items-center justify-center h-20">
           <Image
-            src="/images/whiteLogo.webp"
+            src="/images/whiteLogoAdvisory.png"
             alt="Logo"
             width={160}
             height={60}
@@ -73,8 +72,6 @@ export const Header = () => {
                 <span className="absolute left-1/2 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full group-hover:left-0" />
               </a>
             ))}
-
-           
           </nav>
 
           {/* Call Button */}
@@ -91,11 +88,11 @@ export const Header = () => {
           `}</style>
 
           <a
-            href="tel:9737388388"
+            href="tel:6357665925"
             className="hidden md:flex items-center gap-2 bg-white text-[#264c92] px-4 py-1.5 rounded-full font-semibold shadow-md hover:shadow-lg text-sm transition-all"
           >
             <Phone className="w-4 h-4 text-[#264c92] animate-ring" />
-            9737388388
+            6357665925
           </a>
 
           {/* Mobile Menu Button */}
@@ -146,9 +143,7 @@ export const Header = () => {
               </a>
             ))}
 
-            <div className="mt-4">
-             
-            </div>
+            <div className="mt-4"></div>
           </nav>
 
           <a

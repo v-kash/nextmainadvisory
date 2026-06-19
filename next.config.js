@@ -21,7 +21,7 @@ const nextConfig = {
       },
     ],
     formats: ["image/webp", "image/avif"],
-    minimumCacheTTL: 60,
+    minimumCacheTTL: process.env.NODE_ENV === "development" ? 0 : 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
@@ -40,16 +40,16 @@ const nextConfig = {
   // All images converted to .webp format for better performance and Turbopack compatibility
   turbopack: {
     resolveExtensions: [
-      '.js',
-      '.jsx',
-      '.json',
-      '.jpg',
-      '.jpeg',
-      '.png',
-      '.gif',
-      '.svg',
-      '.webp',
-      '.avif',
+      ".js",
+      ".jsx",
+      ".json",
+      ".jpg",
+      ".jpeg",
+      ".png",
+      ".gif",
+      ".svg",
+      ".webp",
+      ".avif",
     ],
   },
 
@@ -57,271 +57,111 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/inheritance/private-limited-company',
-        destination: '/service/private-limited-company',
+        source: "/inheritance/private-limited-company",
+        destination: "/service/private-limited-company",
         permanent: true, // 301 redirect
       },
       {
-        source: '/inheritance/limited-liability-partnership',
-        destination: '/service/limited-liability-partnership',
+        source: "/inheritance/limited-liability-partnership",
+        destination: "/service/limited-liability-partnership",
         permanent: true,
       },
       {
-        source: '/inheritance/one-person-company',
-        destination: '/service/one-person-company',
+        source: "/inheritance/one-person-company",
+        destination: "/service/one-person-company",
         permanent: true,
       },
       {
-        source: '/inheritance/registered-partnership',
-        destination: '/service/registered-partnership',
+        source: "/inheritance/registered-partnership",
+        destination: "/service/registered-partnership",
         permanent: true,
       },
       {
-        source: '/inheritance/gst-certificate',
-        destination: '/service/gst-certificate',
+        source: "/inheritance/gst-certificate",
+        destination: "/service/gst-certificate",
         permanent: true,
       },
       {
-        source: '/inheritance/company-compliances',
-        destination: '/service/company-compliances',
+        source: "/inheritance/company-compliances",
+        destination: "/service/company-compliances",
         permanent: true,
       },
       {
-        source: '/inheritance/startup-india-certificate',
-        destination: '/service/startup-india-certificate',
+        source: "/inheritance/startup-india-certificate",
+        destination: "/service/startup-india-certificate",
         permanent: true,
       },
       {
-        source: '/inheritance/udyam-certificate-msme',
-        destination: '/service/udyam-certificate-msme',
+        source: "/inheritance/udyam-certificate-msme",
+        destination: "/service/udyam-certificate-msme",
         permanent: true,
       },
       {
-        source: '/inheritance/import-export-code',
-        destination: '/service/import-export-code',
+        source: "/inheritance/import-export-code",
+        destination: "/service/import-export-code",
         permanent: true,
       },
       {
-        source: '/inheritance/icegate-registration',
-        destination: '/service/icegate-registration',
+        source: "/inheritance/icegate-registration",
+        destination: "/service/icegate-registration",
         permanent: true,
       },
       {
-        source: '/inheritance/startup-india-seedfund',
-        destination: '/service/startup-india-seedfund',
+        source: "/inheritance/startup-india-seedfund",
+        destination: "/service/startup-india-seedfund",
         permanent: true,
       },
       {
-        source: '/inheritance/rkvy-raftaar',
-        destination: '/service/rkvy-raftaar',
+        source: "/inheritance/rkvy-raftaar",
+        destination: "/service/rkvy-raftaar",
         permanent: true,
       },
       {
-        source: '/inheritance/naiff',
-        destination: '/service/naiff',
+        source: "/inheritance/naiff",
+        destination: "/service/naiff",
         permanent: true,
       },
       {
-        source: '/inheritance/pmegp',
-        destination: '/service/pmegp',
+        source: "/inheritance/pmegp",
+        destination: "/service/pmegp",
         permanent: true,
       },
       {
-        source: '/inheritance/cgtmse',
-        destination: '/service/cgtmse',
+        source: "/inheritance/cgtmse",
+        destination: "/service/cgtmse",
         permanent: true,
       },
       {
-        source: '/inheritance/mudra-loan',
-        destination: '/service/mudra-loan',
+        source: "/inheritance/mudra-loan",
+        destination: "/service/mudra-loan",
         permanent: true,
       },
       {
-        source: '/inheritance/startup-seed-support',
-        destination: '/service/startup-seed-support',
+        source: "/inheritance/startup-seed-support",
+        destination: "/service/startup-seed-support",
         permanent: true,
       },
       {
-        source: '/inheritance/project-finance',
-        destination: '/service/project-finance',
+        source: "/inheritance/project-finance",
+        destination: "/service/project-finance",
         permanent: true,
       },
       {
-        source: '/inheritance/venture-capital-funds',
-        destination: '/service/venture-capital-funds',
+        source: "/inheritance/venture-capital-funds",
+        destination: "/service/venture-capital-funds",
         permanent: true,
       },
       // ✅ Redirect old /about/festival/ URLs to new /about/events/ URLs
       {
-        source: '/about/festival/:slug*',
-        destination: '/about/events/:slug*',
+        source: "/about/festival/:slug*",
+        destination: "/about/events/:slug*",
         permanent: true, // 301 redirect
       },
     ];
   },
 
   // ✅ Headers for better caching and security
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          {
-            key: "X-DNS-Prefetch-Control",
-            value: "on",
-          },
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
-          {
-            key: "Referrer-Policy",
-            value: "origin-when-cross-origin",
-          },
-          {
-            key: "Content-Security-Policy",
-            value: [
-              "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline' blob: https://www.google.com https://apis.google.com https://ssl.gstatic.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://*.youtube.com https://*.google.com https://*.gstatic.com https://youtube.com https://*.doubleclick.net https://*.googleapis.com https://www.googleadservices.com https://tpc.googlesyndication.com https://www.youtubekids.com https://www.youtube-nocookie.com https://www.youtubeeducation.com https://www-onepick-opensocial.googleusercontent.com https://www.clarity.ms https://scripts.clarity.ms",
-              "script-src-elem 'self' 'unsafe-inline' blob: https://www.google.com https://apis.google.com https://ssl.gstatic.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://*.youtube.com https://*.google.com https://*.gstatic.com https://youtube.com https://*.doubleclick.net https://*.googleapis.com https://www.googleadservices.com https://tpc.googlesyndication.com https://www.youtubekids.com https://www.youtube-nocookie.com https://www.youtubeeducation.com https://www-onepick-opensocial.googleusercontent.com https://www.clarity.ms https://scripts.clarity.ms",
-              "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://*.youtube.com",
-              "media-src 'self' https://*.googlevideo.com https://*.youtube.com https://www.youtube-nocookie.com blob: data:",
-              "connect-src 'self' https://www.google.com https://apis.google.com https://*.google.com https://*.googleapis.com https://*.youtube.com https://www.youtube.com https://www.clarity.ms https://*.clarity.ms https://www.googletagmanager.com https://www.google-analytics.com https://leads.nextgenconsultancy.in",
-              "img-src 'self' data: blob: https: https://i.ytimg.com https://www.youtube-nocookie.com",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-              "font-src 'self' data: https://fonts.gstatic.com",
-            ].join("; "),
-          },
-        ],
-      },
-      {
-        source: "/fonts/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/_next/static/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/images/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/_next/image(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, stale-while-revalidate=86400",
-          },
-        ],
-      },
-      {
-        source: "/:path*.jpg",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/:path*.jpeg",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/:path*.png",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/:path*.gif",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/:path*.webp",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/:path*.svg",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/:path*.ico",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/:path*.avif",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/:path*.js",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/:path*.css",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-    ];
-  },
+  
 };
 
 module.exports = nextConfig;
