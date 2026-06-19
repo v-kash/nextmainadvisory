@@ -2,7 +2,6 @@ import "./globals.css";
 import FloatingButton from "./components/FloatingButton";
 import Script from "next/script";
 import { Be_Vietnam_Pro, Bebas_Neue, Inter } from "next/font/google";
-import CelebrationPopup from "./components/CelebrationPopup";
 
 // Optimize fonts with Next.js font optimization
 const beVietnamPro = Be_Vietnam_Pro({
@@ -281,7 +280,6 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
-        <CelebrationPopup />
         <FloatingButton />
       </body>
     </html>
