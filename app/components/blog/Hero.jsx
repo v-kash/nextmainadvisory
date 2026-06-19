@@ -79,7 +79,7 @@ export default function Hero() {
                   </a>
       
                   <a
-                    href="tel:+911234567890"
+                    href="tel:+916357665925"
                     className="group relative flex items-center justify-center backdrop-blur-xl bg-white hover:bg-white transition-all duration-300 rounded-2xl h-14 px-8 shadow-xl hover:shadow-2xl transform hover:scale-105 border-2 border-white/50"
                   >
                     <span className="text-[#245586] font-bold flex items-center gap-2.5">

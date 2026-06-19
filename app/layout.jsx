@@ -114,8 +114,7 @@ export default function RootLayout({ children }) {
     description:
       "Your one-stop hub for Startup India, MSME support, tax exemptions, and investor connections.",
     sameAs: [
-      "https://www.facebook.com/people/Next-Gen-Business-Consultancy-Private-Limited/61574060610065/",
-      "https://in.linkedin.com/company/nextgen-business-consultancy",
+      "https://www.facebook.com/profile.php?id=61589334962504",
       "https://www.instagram.com/next_gen_business_consultancy/",
       "https://www.youtube.com/@NextGen-business-consultancy",
     ],
@@ -131,9 +130,9 @@ export default function RootLayout({ children }) {
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Drive in Road",
-      addressLocality: "Ahmedabad",
-      postalCode: "380051",
+      streetAddress: "2nd Street, Subbu Towers",
+      addressLocality: "Chennai",
+      postalCode: "600035.",
       addressCountry: "IN",
     },
   };
@@ -151,9 +150,9 @@ export default function RootLayout({ children }) {
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Drive in Road",
-      addressLocality: "Ahmedabad",
-      postalCode: "380051",
+      streetAddress: "2nd Street, Subbu Towers",
+      addressLocality: "Chennai",
+      postalCode: "600035.",
       addressCountry: "IN",
     },
     geo: {
@@ -177,10 +176,9 @@ export default function RootLayout({ children }) {
       },
     ],
     sameAs: [
-      "https://www.facebook.com/p/Next-Gen-Business-Consultancy-Private-Limited-61574060610065/",
-      "https://www.instagram.com/next_gen_business_consultancy/",
+      "https://www.facebook.com/profile.php?id=61589334962504",
+      "https://www.instagram.com/nextgenstartupadvisory/",
       "https://www.youtube.com/@NextGen-business-consultancy",
-      "https://in.linkedin.com/company/nextgen-business-consultancy",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",

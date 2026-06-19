@@ -128,7 +128,7 @@ export default function Footer() {
               <MapPin className="w-5 h-5 text-white mt-0.5" />
               <p>
                 46 Fanepet, 2nd Street, Subbu Towers, <br />
-                3rd Floor ,Nandanam, 600035
+                3rd Floor ,Nandanam, Chennai-600035
               </p>
             </div>
 

@@ -33,11 +33,11 @@ export default function GoogleReviewSlider() {
     },
     {
       name: "Sudheer Kumar",
-      text: "I'm really thankful to Next Gen Business Consultancy Private Limited for their excellent support in getting my Startup India certificate. The entire process was smooth and well-managed. Their team was always available to guide me, answered all my questions, and handled the documentation perfectly. As a new startup, I found their help extremely valuable. I highly recommend their services to anyone looking for reliable support in business certifications and startup documentation.",
+      text: "I'm really thankful to NextGen Startup Advisory Private Limited for their excellent support in getting my Startup India certificate. The entire process was smooth and well-managed. Their team was always available to guide me, answered all my questions, and handled the documentation perfectly. As a new startup, I found their help extremely valuable. I highly recommend their services to anyone looking for reliable support in business certifications and startup documentation.",
     },
     {
       name: "Rahul Soni",
-      text: "Pitch deck report created by next gen business consultancy is extremely good. I am very happy with next gen business team. They are doing great help to new entrepreneurs.",
+      text: "Pitch deck report created by NextGen Startup Advisory is extremely good. I am very happy with next gen business team. They are doing great help to new entrepreneurs.",
     },
     {
       name: "Dharmendra Jadeja",
@@ -53,11 +53,11 @@ export default function GoogleReviewSlider() {
     },
     {
       name: "Jitendra Gohel",
-      text: "I had a great experience with Next Gen Business Consultancy Private Limited. They helped me get my Startup India certificate smoothly and without any delays. The team was very professional, supportive, and always ready to guide me at every step. As a new startup founder, I wasn’t familiar with the process, but their clear communication and expert handling made everything easy. I truly appreciate their service and highly recommend them to any startup looking for reliable help with certifications and documentation.",
+      text: "I had a great experience with NextGen Startup Advisory Private Limited. They helped me get my Startup India certificate smoothly and without any delays. The team was very professional, supportive, and always ready to guide me at every step. As a new startup founder, I wasn’t familiar with the process, but their clear communication and expert handling made everything easy. I truly appreciate their service and highly recommend them to any startup looking for reliable help with certifications and documentation.",
     },
     {
       name: "Raj Dangar",
-      text: "I had a wonderful experience with Next Gen Business Consultancy Private Limited. They assisted me in obtaining my Startup India certificate quickly and without any complications. The team was professional, approachable, and consistently guided me throughout the entire process. As a first-time startup founder, I had limited knowledge about the procedure, but their clear communication and expert support made everything simple and stress-free. I truly value their service and highly recommend them to any startup seeking trusted assistance with certifications and documentation.",
+      text: "I had a wonderful experience with NextGen Startup Advisory Private Limited. They assisted me in obtaining my Startup India certificate quickly and without any complications. The team was professional, approachable, and consistently guided me throughout the entire process. As a first-time startup founder, I had limited knowledge about the procedure, but their clear communication and expert support made everything simple and stress-free. I truly value their service and highly recommend them to any startup seeking trusted assistance with certifications and documentation.",
     },
     {
       name: "Chameleon Infotech",
@@ -81,7 +81,7 @@ export default function GoogleReviewSlider() {
     },
     {
       name: "Krishnabh Barman",
-      text: "The service was very good. Also the connection between the consultancy and us were very reliable. The next gen consultancy helped us in getting important certificates and services which will help us to manage our business smoothly in the coming days.",
+      text: "The service was very good. Also the connection between the consultancy and us were very reliable. The NextGen Startup Advisory helped us in getting important certificates and services which will help us to manage our business smoothly in the coming days.",
     },
     {
       name: "Karan Jena",
@@ -105,7 +105,7 @@ export default function GoogleReviewSlider() {
     },
     {
       name: "Sanjeev Bhatia",
-      text: "We are very happy with the execution speed demonstrated by Next Gen Business Consultancy in getting the Start Up Certificate for our entity and wish them all the best for their future endeavours",
+      text: "We are very happy with the execution speed demonstrated by NextGen Startup Advisory in getting the Start Up Certificate for our entity and wish them all the best for their future endeavours",
     },
     {
       name: "Ramsewak DHruv",
