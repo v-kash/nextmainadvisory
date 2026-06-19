@@ -222,7 +222,7 @@ const Address = () => {
                     Local Language Support (Chennai)
                   </p>
                   <a
-                    href="tel:+916357665925"
+                    href="tel:+919737388388"
                     className="text-sm font-extrabold text-[#245586] hover:text-[#1c4268]"
                   >
                     +91 6357 665 925
@@ -262,10 +262,10 @@ const Address = () => {
                 </h4>
                 <br />
                 <a
-                  href="mailto:info@nextgenconsultancy.in"
+                  href="mailto:info@nextgenstartup.co.in"
                   className="text-sm font-extrabold text-[#245586] break-all hover:text-[#1c4268]"
                 >
-                  support@nextgenstartup.co.in
+                  info@nextgenstartup.co.in
                 </a>
                 <p className="text-xs text-slate-500 font-medium">
                   24-hour response time guarantee

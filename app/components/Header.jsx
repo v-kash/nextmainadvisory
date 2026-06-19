@@ -34,7 +34,7 @@ export const Header = () => {
         {/* Logo */}
         <div className="flex items-center justify-center h-20">
           <Image
-            src="/images/whiteLogoAdvisory.png"
+            src="/images/whitelogo3.png"
             alt="Logo"
             width={160}
             height={60}
@@ -88,11 +88,11 @@ export const Header = () => {
           `}</style>
 
           <a
-            href="tel:6357665925"
+            href="tel:9737388388"
             className="hidden md:flex items-center gap-2 bg-white text-[#264c92] px-4 py-1.5 rounded-full font-semibold shadow-md hover:shadow-lg text-sm transition-all"
           >
             <Phone className="w-4 h-4 text-[#264c92] animate-ring" />
-            6357665925
+            9737388388
           </a>
 
           {/* Mobile Menu Button */}

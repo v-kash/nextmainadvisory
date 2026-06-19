@@ -47,34 +47,32 @@ export default function Hero() {
           </div>
 
           <p className="text-white text-base md:text-lg leading-[1.75] max-w-[530px] mx-auto lg:mx-0">
-            Let’s connect and explore how we can help your business grow.
-            Reach out to us for a free consultation and expert guidance.
+            Let’s connect and explore how we can help your business grow. Reach
+            out to us for a free consultation and expert guidance.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-2">
-          
-
             <a
-              href="tel:+916357665925"
+              href="tel:+919737388388"
               className="group relative flex items-center justify-center backdrop-blur-xl bg-white hover:bg-white transition-all duration-300 rounded-2xl h-14 px-8 shadow-xl hover:shadow-2xl transform hover:scale-105 border-2 border-white/50"
             >
               <span className="text-[#245586] font-bold flex items-center gap-2.5">
                 Call Now
                 <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[#245586] text-white transform group-hover:rotate-90 transition-transform duration-500">
                   <svg
-                  className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={3}
-                    d="M13 9l3 3m0 0l-3 3m3-3H8"
-                  />
-                </svg>
+                    className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={3}
+                      d="M13 9l3 3m0 0l-3 3m3-3H8"
+                    />
+                  </svg>
                 </div>
               </span>
             </a>

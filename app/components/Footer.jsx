@@ -11,7 +11,7 @@ export default function Footer() {
         {/* --- Column 1: Logo + Tagline --- */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6">
           <Image
-            src="/images/whiteLogoAdvisory.png"
+            src="/images/whitelogo3.png"
             alt="Next-Gen Logo"
             width={220}
             height={60}
@@ -26,7 +26,7 @@ export default function Footer() {
           </h4>
           <div className="flex gap-4">
             {/* LinkedIn */}
-         
+
             {/* Facebook */}
             <a
               href="https://www.facebook.com/profile.php?id=61589334962504"
@@ -135,13 +135,13 @@ export default function Footer() {
             {/* Email */}
             <div className="flex items-center justify-center md:justify-start gap-2">
               <Mail className="w-5 h-5 text-white" />
-              <p>support@nextgenbusiness.co.in</p>
+              <p>info@nextgenstartup.co.in</p>
             </div>
 
             {/* Phone */}
             <div className="flex items-center justify-center md:justify-start gap-2">
               <Phone className="w-5 h-5 text-white" />
-              <p>+91-6357665925</p>
+              <p>+91-9737388388</p>
             </div>
           </div>
         </div>

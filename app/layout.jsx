@@ -53,21 +53,21 @@ export const metadata = {
     canonical: "https://www.nextgenstartup.co.in/",
   },
 
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-32x32.webp", sizes: "32x32", type: "image/webp" },
-    ],
-    shortcut: "/favicon-32x32.webp",
-    apple: [
-      { url: "/apple-touch-icon.webp", sizes: "180x180", type: "image/webp" },
-    ],
-  },
+icons: {
+  icon: [
+    { url: "/favicon.ico" },
+    { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+  ],
+  shortcut: "/favicon-32x32.png",
+  apple: [
+    { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+  ],
+},
 
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "NextGen Business",
+    title: "NextGen Startup Advisory",
   },
 
   formatDetection: {
@@ -115,7 +115,7 @@ export default function RootLayout({ children }) {
       "Your one-stop hub for Startup India, MSME support, tax exemptions, and investor connections.",
     sameAs: [
       "https://www.facebook.com/profile.php?id=61589334962504",
-      "https://www.instagram.com/next_gen_business_consultancy/",
+      "https://www.instagram.com/nextgenstartupadvisory/",
       "https://www.youtube.com/@NextGen-business-consultancy",
     ],
     contactPoint: [
@@ -243,7 +243,7 @@ export default function RootLayout({ children }) {
         />
 
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-ZPW2HYC5BE"
+          src="https://www.googletagmanager.com/gtag/js?id=G-6CD4082KPR"
           strategy="afterInteractive"
         />
 
@@ -255,7 +255,7 @@ export default function RootLayout({ children }) {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-ZPW2HYC5BE', {
+      gtag('config', 'G-6CD4082KPR', {
         page_path: window.location.pathname,
       });
     `,
